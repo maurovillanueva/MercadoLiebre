@@ -1,43 +1,30 @@
-const express = require('express')
-const app = express()
-const path = require('path')
+const express = require("express");
+const path = require("path");
+const app = express();
+const port = 3000;
 
-const port = 3000
+// static
+const publicPath = path.join(__dirname, "public/");
+app.use(express.static(publicPath));
 
-// views
-const views = path.join(__dirname, 'views/')
-// public
-const public = path.join(__dirname, 'public/')
-// hhtp routes
-const hhtpRaiz = '/'
-const htpptHome = '/home'
-const htpptLogin = '/login'
-const htpptRegister = '/register'
-// html
-const homeHtml = 'home.html'
-const loginHtml = 'login.html'
-const registerHtml = 'register.html'
+// Port
+app.listen(process.env.PORT || port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
 
-// Define the static file path
-app.use(express.static(public));
+// routes
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "views/home.html"));
+});
 
-app.get(hhtpRaiz, (req, res) => {
-    res.sendFile(homeHtml)
-})
+app.get("/home", (req, res) => {
+  res.sendFile(path.join(__dirname, "views/home.html"));
+});
 
-app.get(htpptHome, (req, res) => {
-    res.sendFile(homeHtml)
-})
+app.get("/register", (req, res) => {
+  res.sendFile(path.join(__dirname, "views/register.html"));
+});
 
-app.get(htpptLogin, (req, res) => {
-    res.sendFile(loginHtml)
-})
-
-app.get(htpptRegister, (req, res) => {
-    res.sendFile(registerHtml)
-})
-
-app.listen(process.env.PORT || port , () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-    console.log(__dirname)
-})
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(__dirname, "views/login.html"));
+});
