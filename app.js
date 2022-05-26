@@ -15,8 +15,8 @@ const htpptLogin = '/Login'
 const htpptRegister = '/Register'
 // html
 const homeHtml = 'home.html'
-const loginHtml = 'Login.html'
-const registerHtml = 'Register.html'
+const loginHtml = 'login.html'
+const registerHtml = 'register.html'
 
 // Define the static file path
 app.use(express.static(public));
