@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@100&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+.noBorderI{
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 90%;
+  align-content: center;
+}
+.noBorder input{
+  margin-bottom: 15px;
+}
+#register{
+  border: solid 3px rgba(25, 25, 233, 0.872);
+  border-radius: 10px;
+  margin: 25px;
+  background-color: rgb(237, 232, 232);
+}
+form h2{
+  margin-top: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+h3{
+  margin-left: 10px;
+}
+.ft-usuario {
+  display: flex;
+  flex-direction: column;
+}
+.ft-usuario input{
+  margin: 10px;
+}
+.categoria p{
+  margin: 20px;
+}
+.boton{
+  display: flex;
+  justify-content: center;
+}
+.boton .button{
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(25, 25, 233, 0.872);
+  color: white;
+}
+/* DESKTOP */
+@media (min-width: 769px) {
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #register{
+    width: 50%;
+  }
+  form h2{
+    margin-top: 10px;
+    font-size: 50px;
+    text-align: center;
+  }
+}
