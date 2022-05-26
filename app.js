@@ -19,7 +19,7 @@ const loginHtml = 'Login.html'
 const registerHtml = 'Register.html'
 
 // Define the static file path
-app.use(express.static(__dirname +'/public/'));
+app.use(express.static(public));
 
 app.get(hhtpRaiz, (req, res) => {
     res.sendFile(path.join(views, homeHtml))
