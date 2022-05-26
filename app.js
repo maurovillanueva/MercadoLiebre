@@ -22,19 +22,19 @@ const registerHtml = 'register.html'
 app.use(express.static(public));
 
 app.get(hhtpRaiz, (req, res) => {
-    res.sendFile(views, homeHtml)
+    res.sendFile(homeHtml)
 })
 
 app.get(htpptHome, (req, res) => {
-    res.sendFile(views, homeHtml)
+    res.sendFile(homeHtml)
 })
 
 app.get(htpptLogin, (req, res) => {
-    res.sendFile(views, loginHtml)
+    res.sendFile(loginHtml)
 })
 
 app.get(htpptRegister, (req, res) => {
-    res.sendFile(views, registerHtml)
+    res.sendFile(registerHtml)
 })
 
 app.listen(process.env.PORT || port , () => {
