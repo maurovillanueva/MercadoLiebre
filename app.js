@@ -11,8 +11,8 @@ const public = path.join(__dirname, 'public/')
 // hhtp routes
 const hhtpRaiz = '/'
 const htpptHome = '/home'
-const htpptLogin = '/Login'
-const htpptRegister = '/Register'
+const htpptLogin = '/login'
+const htpptRegister = '/register'
 // html
 const homeHtml = 'home.html'
 const loginHtml = 'login.html'
